@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Admin.EO
-  Date: 24.11.2023
-  Time: 11:29
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -60,7 +53,7 @@
         </div>
     </div>
     <div class="mx-auto mt-1" style="width:200px">
-        <form action="/step0" method="post">
+        <form action="/startChallenge" method="post">
             <input type="hidden" name="choice" value="true">
             <input type="submit" value="Вперед до пригод!" />
         </form>

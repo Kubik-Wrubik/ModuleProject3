@@ -9,7 +9,7 @@
     <h1 style="font-weight:lighter"><%=((UFOAnswer)session.getAttribute("answer")).getMessage()%></h1>
     <h1>Поразка</h1>
     <div class="form">
-        <form action="/step0" method="post">
+        <form action="/startChallenge" method="post">
             <input type="hidden" name="choice" value="true">
             <input type="submit" value="Спробувати ще раз">
         </form>

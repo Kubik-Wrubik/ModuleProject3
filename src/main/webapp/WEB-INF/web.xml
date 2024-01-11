@@ -4,6 +4,6 @@
          version="4.0">
 
     <welcome-file-list>
-        <welcome-file>jsp/start.jsp</welcome-file>
+        <welcome-file>jsp/startChallenge.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

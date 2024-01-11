@@ -3,19 +3,19 @@ package answers;
 import java.util.HashMap;
 import java.util.Map;
 
-import static answers.AppContent.*;
+import static answers.AppConstants.*;
 
 public class AppReference {
     private final static Map<String, String> refs = new HashMap<>();
 
     static {
-        refs.put(STEP_0_ACCEPTED, "jsp/step1.jsp");
-        refs.put(STEP_1_ACCEPTED, "jsp/step2.jsp");
-        refs.put(STEP_2_ACCEPTED, "jsp/step3.jsp");
-        refs.put(STEP_3_ACCEPTED, "jsp/victory.jsp");
-        refs.put(STEP_1_NOT_ACCEPTED, "jsp/fail.jsp");
-        refs.put(STEP_2_NOT_ACCEPTED, "jsp/fail.jsp");
-        refs.put(STEP_3_NOT_ACCEPTED, "jsp/fail.jsp");
+        refs.put(START_CHELLENGE_ACCEPTED, ACCEPTING_UFO_CHALLENGE_PAGE);
+        refs.put(UFO_CHALLENGE_ACCEPTED, GOING_TO_NEGOTIATIONS_PAGE);
+        refs.put(GOING_TO_NEGOTIATIONS_ACCEPTED, SPEAKING_WITH_ALIENS_PAGE);
+        refs.put(SPEAKING_WITH_ALIENS_ACCEPTED, VICTORY_PAGE);
+        refs.put(UFO_CHALLENGE_NOT_ACCEPTED, FAIL_PAGE);
+        refs.put(GOING_TO_NEGOTIATIONS_NOT_ACCEPTED, FAIL_PAGE);
+        refs.put(SPEAKING_WITH_ALIENS_NOT_ACCEPTED, FAIL_PAGE);
     }
 
     public static String getRef(String ref){

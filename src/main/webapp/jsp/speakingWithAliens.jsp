@@ -9,7 +9,7 @@
 <h1 style="font-weight:lighter"><%=((UFOAnswer)session.getAttribute("answer")).getMessage()%></h1>
 <h1>Хто ви?</h1>
 <div class="form">
-    <form action="/step3" method="post">
+    <form action="/speakingWithAliens" method="post">
         <label>Розповісти правду про себе:</label>
         <input type="radio" name="choice" value="true"><br>
         <label>Збрехати про себе:</label>

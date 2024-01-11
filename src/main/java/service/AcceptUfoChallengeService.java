@@ -1,8 +1,10 @@
 package service;
 
+import answers.NegativeUFOAnswer;
+import answers.PositiveUFOAnswer;
 import answers.UFOAnswer;
 
-import static answers.AppContent.*;
+import static answers.AppConstants.*;
 import static answers.AppReference.getRef;
 
 public class AcceptUfoChallengeService {
@@ -12,30 +14,30 @@ public class AcceptUfoChallengeService {
         if (isAccepted) {
             switch (step) {
                 case 0:
-                    answer = new UFOAnswer(STEP_0_ACCEPTED, getRef(STEP_0_ACCEPTED));
+                    answer = new PositiveUFOAnswer(START_CHELLENGE_ACCEPTED, getRef(START_CHELLENGE_ACCEPTED));
                     break;
                 case 1:
-                    answer = new UFOAnswer(STEP_1_ACCEPTED, getRef(STEP_1_ACCEPTED));
+                    answer = new PositiveUFOAnswer(UFO_CHALLENGE_ACCEPTED, getRef(UFO_CHALLENGE_ACCEPTED));
                     break;
                 case 2:
-                    answer = new UFOAnswer(STEP_2_ACCEPTED, getRef(STEP_2_ACCEPTED));
+                    answer = new PositiveUFOAnswer(GOING_TO_NEGOTIATIONS_ACCEPTED, getRef(GOING_TO_NEGOTIATIONS_ACCEPTED));
                     break;
                 case 3:
-                    answer = new UFOAnswer(STEP_3_ACCEPTED, getRef(STEP_3_ACCEPTED));
+                    answer = new PositiveUFOAnswer(SPEAKING_WITH_ALIENS_ACCEPTED, getRef(SPEAKING_WITH_ALIENS_ACCEPTED));
                     break;
                 default:
-                    answer = new UFOAnswer(STEP_1_NOT_ACCEPTED, getRef(STEP_1_NOT_ACCEPTED));
+                    answer = new NegativeUFOAnswer(UFO_CHALLENGE_NOT_ACCEPTED, getRef(UFO_CHALLENGE_NOT_ACCEPTED));
             }
         } else {
             switch (step) {
                 case 2:
-                    answer = new UFOAnswer(STEP_2_NOT_ACCEPTED, getRef(STEP_2_NOT_ACCEPTED));
+                    answer = new NegativeUFOAnswer(GOING_TO_NEGOTIATIONS_NOT_ACCEPTED, getRef(GOING_TO_NEGOTIATIONS_NOT_ACCEPTED));
                     break;
                 case 3:
-                    answer = new UFOAnswer(STEP_3_NOT_ACCEPTED, getRef(STEP_3_NOT_ACCEPTED));
+                    answer = new NegativeUFOAnswer(SPEAKING_WITH_ALIENS_NOT_ACCEPTED, getRef(SPEAKING_WITH_ALIENS_NOT_ACCEPTED));
                     break;
                 default:
-                    answer = new UFOAnswer(STEP_1_NOT_ACCEPTED, getRef(STEP_1_NOT_ACCEPTED));
+                    answer = new NegativeUFOAnswer(UFO_CHALLENGE_NOT_ACCEPTED, getRef(UFO_CHALLENGE_NOT_ACCEPTED));
             }
         }
         return answer;
